@@ -25,12 +25,22 @@ func TamanhoLista() {
 		},
 	}
 
-	lista.PrintarLista()
+	lista.printarLista()
+	fmt.Println("\n Tamanho: ", lista.tamanhoLista())
 }
 
-find
+// Função Length
+func (l *Lista) tamanhoLista() int {
+	count := 0 // Contagem começa em zero
+	current := l
+	for current != nil {
+		count++                // Adiciona em 'Count'
+		current = current.next // Passa pro proximo
+	}
+	return count
+}
 
-func (n *Lista) PrintarLista() {
+func (n *Lista) printarLista() {
 	atual := n
 	for atual != nil {
 		fmt.Print(atual.data, " --> ")

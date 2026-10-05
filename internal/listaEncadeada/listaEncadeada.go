@@ -32,11 +32,11 @@ func NomeEncadeada() {
 		},
 	}
 
-	nodes.PrintarLista()
+	nodes.printarLista()
 }
 
 // Função que trabalha apontando para *Node unsando n e depois passando para "current"
-func (n *Node) PrintarLista() {
+func (n *Node) printarLista() {
 	current := n
 	for current != nil {
 		fmt.Print(current.data, " --> ") // Printa 'data' do atual

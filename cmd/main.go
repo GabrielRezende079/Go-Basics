@@ -18,7 +18,7 @@ func main() {
 	var escolha int
 
 	fmt.Print("Escolha uma função:\n 1. tiposExecutar \n 2. Randomizador \n 3. Checador \n 4. errosExecutar \n 5." +
-		" Ponteiro \n 6. Slices \n 7. Grafo \n 8. Palindromo \n 9. Lista Encadeada \n 10. Tamanho da Lista \n")
+		" Ponteiro \n 6. Slices \n 7. Grafo \n 8. Palindromo \n 9. Lista Encadeada \n 10. Tamanho da Lista \n 11. Inset na Lista \n")
 	fmt.Scanln(&escolha)
 
 	switch {
@@ -47,5 +47,7 @@ func main() {
 		listaEncadeada.NomeEncadeada()
 	case escolha == 10:
 		listaEncadeada.TamanhoLista()
+	case escolha == 11:
+		listaEncadeada.Convidados("Otavio")
 	}
 }
