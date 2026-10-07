@@ -14,7 +14,8 @@ func EscolherSlice() {
 
 	lista0 := []int{3, 0, 1}
 
-	fmt.Print("\n 1. Exemplo de Append \n 2. Exemplo de Indexação \n 3. Listar Impares \n 4. Inverter Lista \n 5. Mover zeros \n 6. teste \n 7. Numero faltando \n")
+	fmt.Print("\n 1. Exemplo de Append \n 2. Exemplo de Indexação \n 3. Listar Impares \n 4. Inverter Lista \n 5. Mover zeros \n 6. teste \n 7. Numero faltando \n" +
+		"8. Maior Numero \n")
 	fmt.Scan(&escolha)
 
 	switch {
@@ -32,6 +33,8 @@ func EscolherSlice() {
 		fmt.Println(teste(lista0))
 	case escolha == 7:
 		fmt.Println(missingNumber(lista0))
+	case escolha == 8:
+		fmt.Println(maiorNumero(lista0))
 	}
 }
 
@@ -131,4 +134,14 @@ func missingNumber(numeros []int) int {
 	}
 
 	return somaDosNumeros
+}
+
+func maiorNumero(arr []int) int {
+	maior := arr[0]
+	for _, num := range arr {
+		if num > maior {
+			maior = num
+		}
+	}
+	return maior
 }
