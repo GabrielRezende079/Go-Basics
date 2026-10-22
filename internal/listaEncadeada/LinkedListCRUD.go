@@ -31,7 +31,7 @@ func LinkedListCRUD() {
 	var escolha int
 	var nome string
 	for {
-		fmt.Println("1. listar lista | 2. Inserir no Inicio | 3. Inserir no Final | 4. Remover do Inicio | 5. Remover do Final")
+		fmt.Println("1. listar lista | 2. Inserir no Inicio | 3. Inserir no Final | 4. Inserir em Posição definida | 5. Remover do Inicio | 6. Remover do Final")
 		fmt.Scanln(&escolha)
 		switch {
 		case escolha == 1:
@@ -45,8 +45,10 @@ func LinkedListCRUD() {
 			fmt.Scanln(&nome)
 			Compra.inserFinal(nome)
 		case escolha == 4:
-			Compra.removeInicio()
+			Compra.insertAtGivenPosition()
 		case escolha == 5:
+			Compra.removeInicio()
+		case escolha == 6:
 			Compra.removeFinal()
 		}
 	}
@@ -112,4 +114,7 @@ func (ll *linkedList) removeFinal() {
 	}
 	previous.next = nil
 	ll.printarLista()
+}
+
+func (ll *linkedList) insertAtGivenPosition() {
 }

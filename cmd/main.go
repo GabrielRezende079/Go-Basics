@@ -7,6 +7,7 @@ import (
 	clearterminal "github/GabrielRezende079/teste/internal/clearTerminal"
 	"github/GabrielRezende079/teste/internal/erros"
 	"github/GabrielRezende079/teste/internal/grafos"
+	"github/GabrielRezende079/teste/internal/interfaces"
 	"github/GabrielRezende079/teste/internal/listaEncadeada"
 	"github/GabrielRezende079/teste/internal/ponteiro"
 	"github/GabrielRezende079/teste/internal/slices"
@@ -20,7 +21,7 @@ func main() {
 
 	fmt.Print("Escolha uma função:\n 1. tiposExecutar \n 2. Randomizador \n 3. Checador \n 4. errosExecutar \n 5." +
 		" Ponteiro \n 6. Slices \n 7. Grafo \n 8. Palindromo \n 9. Lista Encadeada \n 10. Tamanho da Lista \n 11. Inset na Lista" +
-		"\n 12. CRUD \n 13. Buscas em Slice \n")
+		"\n 12. CRUD \n 13. Buscas em Slice \n 14. Interface \n")
 	fmt.Scanln(&escolha)
 
 	switch {
@@ -55,5 +56,7 @@ func main() {
 		listaEncadeada.LinkedListCRUD()
 	case escolha == 13:
 		buscas.BuscarNumero()
+	case escolha == 14:
+		interfaces.ExecutarInterfaces()
 	}
 }
