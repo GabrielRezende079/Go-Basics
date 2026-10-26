@@ -3,6 +3,8 @@ package interfaces
 import (
 	"fmt"
 	"math"
+
+	clearterminal "github/GabrielRezende079/teste/internal/clearTerminal"
 )
 
 // Interface para formas
@@ -41,6 +43,7 @@ func escreverArea(f forma) {
 
 // Main
 func ExecutarInterfaces() {
+	clearterminal.LimparTerminal()
 	r := retangulo{10, 15}
 	c := circulo{5}
 	escreverArea(r)
