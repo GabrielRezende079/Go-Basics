@@ -3,8 +3,10 @@ package main
 import (
 	"fmt"
 
+	arvores "github/GabrielRezende079/teste/internal/Arvores"
 	"github/GabrielRezende079/teste/internal/buscas"
 	clearterminal "github/GabrielRezende079/teste/internal/clearTerminal"
+	"github/GabrielRezende079/teste/internal/concurrencyPatterns"
 	"github/GabrielRezende079/teste/internal/erros"
 	"github/GabrielRezende079/teste/internal/goroutines"
 	"github/GabrielRezende079/teste/internal/grafos"
@@ -22,7 +24,7 @@ func main() {
 
 	fmt.Print("Escolha uma função:\n 1. tiposExecutar \n 2. Randomizador \n 3. Checador \n 4. errosExecutar \n 5." +
 		" Ponteiro \n 6. Slices \n 7. Grafo \n 8. Palindromo \n 9. Lista Encadeada \n 10. Tamanho da Lista \n 11. Inset na Lista" +
-		"\n 12. CRUD \n 13. Buscas em Slice \n 14. Interface \n 15. Gourotines \n")
+		"\n 12. CRUD \n 13. Buscas em Slice \n 14. Interface \n 15. Gourotines \n 16.Arvore Binaria \n 17. Executar Workers em Fibonacci \n")
 	fmt.Scanln(&escolha)
 
 	switch {
@@ -61,5 +63,9 @@ func main() {
 		interfaces.ExecutarInterfaces()
 	case escolha == 15:
 		goroutines.ExecutarGourrotines()
+	case escolha == 16:
+		arvores.ExecutarArvoreBinaria()
+	case escolha == 17:
+		concurrencyPatterns.ExecutarFibonacci()
 	}
 }

@@ -25,7 +25,7 @@ func escrever(texto string) {
 func ExecutarGourrotines() {
 	// Executar exemplos
 	clearterminal.LimparTerminal()
-	fmt.Print("\n 1. Exemplo Goroutine \n 2. Exemplo WaitGroup \n 3. Exemplo de Channels \n ")
+	fmt.Print("\n 1. Exemplo Goroutine \n 2. Exemplo WaitGroup \n 3. Exemplo de Channels \n 4. Exemplo de Select \n ")
 	fmt.Scanln(&escolha)
 
 	switch {
@@ -37,5 +37,7 @@ func ExecutarGourrotines() {
 		ExecutarWaitGroup()
 	case escolha == 3:
 		ExecutarChannel()
+	case escolha == 4:
+		ExecutarSelect()
 	}
 }
